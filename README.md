@@ -20,9 +20,9 @@
 
 ## 📷 Screenshots
 
-![Home Page](static/screenshots/homepage.png)
-![Loan Types](static/screenshots/loan_types.png)
-![General Loan Form](static/screenshots/general_loan.png)
-![Home Loan Form](static/screenshots/home_loan.png)
-![Personal Loan Form](static/screenshots/personal_loan.png)
-![Insurance Page](static/screenshots/insurance.png)
+![Home Page](screenshots/homepage.png)
+![Loan Types](screenshots/loan_types.png)
+![General Loan Form](screenshots/general_loan.png)
+![Home Loan Form](screenshots/home_loan.png)
+![Personal Loan Form](screenshots/personal_loan.png)
+![Insurance Page](screenshots/insurance.png)
