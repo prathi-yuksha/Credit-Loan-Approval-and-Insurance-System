@@ -24,5 +24,5 @@
 ![Loan Types](screenshots/loan_types.png)
 ![General Loan Form](screenshots/general_loan.png)
 ![Home Loan Form](screenshots/home_loan.png)
-![Personal Loan Form](screenshots/personal_loan.png)
+![Personal Loan Form](screenshots/personal_loan.jpeg)
 ![Insurance Page](screenshots/insurance.png)
