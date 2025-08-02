@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval</title>
+</head>
+<body>
+    <h1>Loan Approval Page</h1>
+    
+    <form method="post" action="/normal">
+    
+        <label for="no_of_dependents">Number of Dependents:</label>
+        <input type="number" name="no_of_dependents" required><br>
+
+        <label for="education">Education (0: Not Graduate, 1: Graduate):</label>
+        <input type="number" name="education" required><br>
+
+        <label for="self_employed">Self Employed (0: No, 1: Yes):</label>
+        <input type="number" name="self_employed" required><br>
+
+        <label for="income_annum">Annual Income:</label>
+        <input type="number" name="income_annum" required><br>
+
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" name="loan_amount" required><br>
+
+        <label for="loan_term">Loan Term (in years):</label>
+        <input type="number" name="loan_term" required><br>
+
+        <label for="cibil_score">CIBIL Score:</label>
+        <input type="number" name="cibil_score" required><br>
+
+        <label for="residential_assets_value">Residential Assets Value:</label>
+        <input type="number" name="residential_assets_value" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction is defined %}
+        <p>Loan Approval Prediction: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

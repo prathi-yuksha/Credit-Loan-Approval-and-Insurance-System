@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="loan_form.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+.logo{   
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+    color:#fff;
+    margin-top: 10px;
+    margin-left: 32px;
+   
+    
+}
+/* Navigation Bar Container */
+.nav {
+    background-color: #000;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+}
+
+/* Logo styling (if any) */
+.nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #f84312;
+}
+
+.container {
+    align-items: center;
+    padding: 25px;
+    height: 10%;
+    width: 40%;
+    padding-bottom: 70px;
+    border-radius: 60px;
+    float: right;
+    
+    
+}
+
+.container form {
+    padding: 20px;
+    background: #ffffffd1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-color: #212121; */
+    /* color: #ccc; */
+    
+}
+
+.container form .title {
+    font-size: 20px;
+    /* color: #333; */
+    color: #000;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .inputBox {
+    margin: 15px 0;
+}
+
+.container form .inputBox span {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.container form .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #f84312;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+    background: #ff7d5a;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    /* background-color: #f84312; */
+    box-shadow: 0 0 5px ;
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.big_container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #f84312; */
+    /* background-image: url('/loan_background3.jpg'); */
+    background-image:  url("{{ url_for('static', filename='loan_background3.jpg') }}");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 67, 67, 0.913);
+    background-blend-mode: multiply;
+   
+    
+   
+}
+
+.rule{
+    color: #fff;
+    margin: 20px;
+}
+.rule h2{
+    padding: 15px;
+    color: #ff7d5a;
+}
+.rule ol{
+    padding: 10px;
+    padding-top: 50px;
+    
+}
+.rule li{
+    padding: 20px;
+}
+.more {
+    color: #f84312; 
+    background-color: transparent;
+    text-align: center;
+    float: right;
+    
+}
+.more:hover{
+    border: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px;
+}
+#why {
+    padding: 20px;
+    padding-top: 10%;
+    border-radius: 10px;
+    /* width: 100%; */
+    margin: 30px;
+}
+
+#why h1 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+   
+}
+
+#why h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#why p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#why ul {
+    
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#why ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#why li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#why strong {
+    font-weight: bold;
+}
+
+#why p:last-child {
+    margin-bottom: 0;
+}
+#why img{
+    margin-left: 150px;
+}
+footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer h3 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background: #667eea;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #5a6fe1;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+</style>
+<body>
+    <div class="nav">
+        <div class="logo">Credit+</div>
+        <nav>    
+                     <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="/index_type">Loan</a></li>
+            <li><a href="/insurance_recommendation">Insurance</a></li>
+            <li><a href=".contact-form">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    </div>
+    <div class="big_container">
+    <div class="step">
+        <div class="rule">
+            <h2>Rules for Loan Approval</h2>
+            <p>Before proceeding with your loan application, please review the following rules and guidelines:</p>
+            <ol>
+                <li><strong>Eligibility Criteria:</strong> Applicants must meet specific eligibility requirements, including age, income, employment status, and creditworthiness.</li>
+                <li><strong>Documentation:</strong> Ensure all required documents, such as proof of income, identification, and financial statements, are submitted accurately and completely.</li>
+                <li><strong>Loan Amount:</strong> The loan amount approved will be based on factors such as income, credit score, and collateral (if applicable).</li>
+                <li><strong>Repayment Terms:</strong> Review the repayment schedule, including installment amounts, frequency of payments, and due dates, to ensure it aligns with your budget.</li>
+                <li><strong>Collateral or Guarantees:</strong> Depending on the loan type, collateral or guarantees may be required to secure the loan.</li>
+                <li><strong>Credit Score:</strong> A minimum credit score may be necessary for loan approval. Review your credit report and address any issues before applying.</li>
+                <li><strong>Residential Assets:</strong> The value of residential assets may impact loan approval and terms. Provide accurate information about your assets during the application process.</li>
+            </ol>
+            <p>By adhering to these rules and guidelines, you can increase your chances of a successful loan approval. If you have any questions or need further clarification, please don't hesitate to contact our team for assistance.</p>
+            <button class="more"><a href="#why">more</a></button>
+        </div>
+        
+       
+    </div>
+
+    <div class="container">
+
+        <form action='/normal' method="post">
+            <h1 class="title">Loan Approval</h1>
+
+
+        
+            <div class="inputBox">
+                <label for="no_of_dependents"><span>Number of Dependents:</span></label>
+                <input type="number" name="no_of_dependents" required placeholder="3/4"><br>
+            </div>
+                    <div class="inputBox">
+                        <label for="education"><span> (0: Not Graduate, 1: Graduate):</span></label>
+                        <input type="number" name="education" required placeholder="Educated/Uneducated"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="self_employed"><span>Self Employed (0: No, 1: Yes):</span></label>
+                        <input type="number" name="self_employed" required placeholder="Yes/No"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="income_annum"><span>Annual income</span></label>
+                        <input type="number" name="income_annum" required placeholder="20000"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="loan_amount"><span>Loan Amount: </span></label>
+                        <input type="number" name="loan_amount" required placeholder="299000"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="loan_term"><span>Loan Term (in years):</span></label>
+                        <input type="number" name="loan_term" required placeholder="12"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cibil_score"><span>credit score: </span></label>
+                        <input type="number" name="cibil_score" required placeholder="450"><br>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="residential_assets_value"><span>Residential Assets Value: </span></label>
+                        <input type="number" name="residential_assets_value" required placeholder="450"><br>
+                    </div>
+                    
+            <input type="Submit" value="Predict" class="submit-btn">
+            <p>Loan Approval Prediction: {{ prediction }}</p>
+        </form>
+    </div>
+</div>
+<div id="why">
+    
+        <h1>Understanding Loans</h1>
+        <h2>What is a Loan?</h2>
+        <p>A loan is a sum of money that an individual or organization borrows from a lender with the promise to repay it, usually with interest, over a defined period of time.</p>
+        
+        <h2>Why Do We Need Loans?</h2>
+        <p>People often need loans to fund large purchases or investments that they can't afford to pay for upfront. Common reasons for taking out loans include:</p>
+        <ul>
+            <li>Buying a house or property</li>
+            <li>Starting or expanding a business</li>
+            <li>Paying for education or training</li>
+            <li>Buying a car or other vehicle</li>
+            <li>Covering unexpected expenses or emergencies</li>
+        </ul>
+        
+        <h2>How Does a Loan Work?</h2>
+        <p>Here's a simplified explanation of how loans typically work:</p>
+        <ol>
+            <li><strong>Application:</strong> The borrower applies for a loan from a lender, providing information about their financial situation and the purpose of the loan.</li>
+            <li><strong>Approval:</strong> The lender evaluates the borrower's application, including their creditworthiness, income, and debt-to-income ratio, to determine if they qualify for the loan.</li>
+            <li><strong>Terms:</strong> If approved, the lender provides the borrower with the loan terms, including the loan amount, interest rate, repayment schedule, and any fees or charges.</li>
+            <li><strong>Disbursement:</strong> Once the borrower accepts the loan offer, the lender disburses the funds, usually directly to the borrower's bank account or as a payment to the seller or service provider.</li>
+            <li><strong>Repayment:</strong> The borrower is required to repay the loan according to the agreed-upon terms, making regular payments over the loan term until the full amount, including interest, is repaid.</li>
+            <li><strong>Completion:</strong> Once the loan is fully repaid, including any interest and fees, the borrower has fulfilled their obligation, and the loan agreement is considered complete.</li>
+        </ol>
+        <h2>Diagram:</h2>
+        <img src="{{ url_for('static', filename='loan_flow_img.jpeg.jpg') }}" alt="Loan Flow Image">
+        <!-- background-image:  url("{{ url_for('static', filename='loan_flow_img.jpg') }}"); -->
+        
+        <p>It's important for borrowers to understand the terms and conditions of a loan before accepting it and to budget for loan payments to avoid financial difficulties.</p>
+</div>
+ <footer>
+  <div class="footer-container">
+    <h3>Contact Us</h3>
+    <form action="#" method="post" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p class="footer-bottom">&copy; 2023 Credit+. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

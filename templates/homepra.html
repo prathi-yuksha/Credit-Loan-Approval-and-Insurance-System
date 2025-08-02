@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit+</title>
+
+</head>
+<style>
+    /* Add this to your existing CSS or create a new file, e.g., styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+body {
+    background-image:  url("{{ url_for('static', filename='background3.jpg') }}");
+    background-size: 100%;
+    color: aliceblue;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(68, 67, 67,10); 
+    background-blend-mode: multiply;
+}
+
+/* Navigation Bar Container */
+.nav {
+    background-color: #000;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+}
+
+/* Logo styling (if any) */
+.nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #f84312;
+}
+
+.sign {
+    float: right;
+}
+
+button {
+    border-radius: 7px;
+    background-color: #27ae60;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.main {
+    width: 100%;
+    text-align: center;
+    /* margin-top: 300px; */
+    word-spacing: 5px;
+}
+
+.main h1 {
+    line-height: 40px;
+    padding: 20px;
+    font-size: 70px;
+    /* margin-bottom: 90px; */
+}
+
+.main p {
+    line-height: 25px;
+    padding: 10px;
+    margin-bottom: 100px;
+    
+}
+
+.started {
+    background-color: #f84312;
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 500px;
+    border-color: black;
+     /* margin-top: 40px; */
+     margin-bottom: 70px;
+}
+
+.started:hover {
+    transition: 0.2s;
+    background-color: #da917d88;
+    border-color: #f84312;
+    border-style: double;
+}
+.started a{
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+}
+
+.Main_c {
+    margin-left: 60px;
+    margin-top: 150px;
+}
+
+</style>
+<body>
+   
+    <div class="nav">
+        <div class="logo">Credit+</div>
+        <nav>
+             <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="/index_type">Loan</a></li>
+            <li><a href="/insurance_recommendation">Insurance</a></li>
+            <li><a href=".contact-form">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="sign">
+        <button class="signin">Signin</button> 
+        <button class="signup">Signup</button> 
+        </div>
+    </div>
+    
+
+<div class="Main_c">
+    <div class="main">
+        <h1>Welcome to Credit+</h1>
+        <p>Where Loans Predictions and Insurance Recommendations<br> Meet Your Financial Destiny!</p>
+
+    </div> 
+    <div>
+        <a href="/index_type" class="btn btn-primary started">Get Started</a>
+        
+    </div>
+</div>
+
+    
+    
+</body>
+</html>

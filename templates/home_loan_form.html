@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="home_loan_form.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+.logo{   
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+    color:#fff;
+    margin-top: 10px;
+    margin-left: 32px;
+   
+    
+}
+/* Navigation Bar Container */
+.nav {
+    background-color: #000;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 60px;
+}
+
+/* Logo styling (if any) */
+.nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #f84312;
+}
+
+.container {
+    align-items: center;
+    padding: 25px;
+    height: 10%;
+    width: 40%;
+    padding-bottom: 70px;
+    border-radius: 60px;
+    float: right;
+    
+    
+}
+
+.container form {
+    padding: 20px;
+    background: #ffffffd1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+   margin-top: 250px;
+    /* background-color: #212121; */
+    /* color: #ccc; */
+    
+}
+
+.container form .title {
+    font-size: 20px;
+    /* color: #333; */
+    color: #000;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.container form .inputBox {
+    margin: 15px 0;
+}
+
+.container form .inputBox span {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.container form .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #f84312;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.container form .submit-btn:hover {
+    background: #ff7d5a;
+}
+
+.step {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    /* background-color: #f84312; */
+    box-shadow: 0 0 5px ;
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.big_container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #f84312; */
+    background-image:  url("{{ url_for('static', filename='home_loan_flow_img.jpg') }}");
+    /* background-image:   url("{{ url_for('static', filename='home_loan_flow_img.jpg') }}"); */
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 67, 67, 0.913);
+    background-blend-mode: multiply;
+   
+    
+   
+}
+
+.rule{
+    color: #fff;
+    margin: 20px;
+}
+.rule h2{
+    padding: 15px;
+    color: #ff7d5a;
+}
+.rule ol{
+    padding: 10px;
+    padding-top: 50px;
+    
+}
+.rule li{
+    padding: 20px;
+}
+.more {
+    color: #f84312; 
+    background-color: transparent;
+    text-align: center;
+    float: right;
+    
+}
+.more:hover{
+    border: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 0 2px;
+}
+#why {
+    padding: 20px;
+    padding-top: 10%;
+    border-radius: 10px;
+    /* width: 100%; */
+    margin: 30px;
+}
+
+#why h1 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+   
+}
+
+#why h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#why p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#why ul {
+    
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#why ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+#why li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#why strong {
+    font-weight: bold;
+}
+
+#why p:last-child {
+    margin-bottom: 0;
+}
+#why img{
+    margin-left: 150px;
+    height: 500px;
+    width: 800px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  margin-top: 0 !important;
+  padding-top: 30px;
+}
+
+.contact-form h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.contact-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #444;
+  color: #fff;
+}
+
+.contact-input::placeholder {
+  color: #ccc;
+}
+
+.contact-btn {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background: #5a6fe1;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+</style>
+<body>
+    <div class="nav">
+        <div class="logo">Credit+</div>
+        <nav>
+                <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="/index_type">Loan</a></li>
+            <li><a href="/insurance_recommendation">Insurance</a></li>
+            <li><a href=".contact-form">Contact</a></li>
+        </ul>
+    </nav>
+    
+    
+    </div>
+    <div class="big_container">
+    <div class="step">
+        <div class="rule">
+            <h2>Rules for Home Loan Approval</h2>
+<p>Before proceeding with your home loan application, please review the following rules and guidelines:</p>
+<ol>
+    <li><strong>Eligibility Criteria:</strong> Applicants must meet specific eligibility requirements, including age, income, employment status, and creditworthiness.</li>
+    <li><strong>Documentation:</strong> Ensure all required documents, such as proof of income, identification, property documents, and financial statements, are submitted accurately and completely.</li>
+    <li><strong>Loan Amount:</strong> The loan amount approved will be based on factors such as income, credit score, property value, and loan-to-value ratio.</li>
+    <li><strong>Repayment Terms:</strong> Review the repayment schedule, including installment amounts, frequency of payments, and due dates, to ensure it aligns with your budget.</li>
+    <li><strong>Collateral:</strong> The property being purchased or refinanced will typically serve as collateral for the loan. Ensure all property-related documents are in order.</li>
+    <li><strong>Credit Score:</strong> A minimum credit score may be necessary for loan approval. Review your credit report and address any issues before applying.</li>
+    <li><strong>Down Payment:</strong> Depending on the loan type and regulations, a down payment may be required. Understand the down payment requirements and ensure you have the necessary funds available.</li>
+</ol>
+<p>By adhering to these rules and guidelines, you can increase your chances of a successful home loan approval. If you have any questions or need further clarification, please don't hesitate to contact our team for assistance.</p>
+<button class="more"><a href="#why">more</a></button>
+
+        </div>
+        
+       
+    </div>
+
+    <div class="container">
+
+        <form action="/home_loan" method="post">
+            <h1 class="title">Loan Approval</h1>
+
+
+        
+            <div class="inputBox">
+                <label for="education">Education:</label>
+                <select name="education" required>
+                    <option value="1">Graduate</option>
+                    <option value="0">Not Graduate</option>
+                </select><br>
+            </div>
+                    <div class="inputBox">
+                        <label for="self_employed">Self Employed:</label>
+        <select name="self_employed" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="applicant_income">Applicant Income:</label>
+                        <input type="number" name="applicant_income" required><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="coapplicant_income">Coapplicant Income:</label>
+                        <input type="number" name="coapplicant_income" required><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" name="loan_amount" required><br>
+
+                    </div>
+                   
+                    
+            <input type="Submit" value="Predict" class="submit-btn">
+            <!-- {% if prediction is defined %} -->
+            <p>Home Loan Prediction: {{ prediction }}</p>
+        <!-- {% endif %} -->
+    
+        </form>
+    </div>
+</div>
+<div id="why">
+    <h1>Understanding Home Loans</h1>
+    
+    <h2>What is a Home Loan?</h2>
+    <p>A home loan, also known as a mortgage, is a loan provided by a financial institution to help individuals purchase a home. The borrower pledges the property as collateral for the loan.</p>
+    
+    <h2>Why Do We Need Home Loans?</h2>
+    <p>Home loans are essential for individuals who wish to buy a home but may not have sufficient funds to purchase it outright. Common reasons for taking out home loans include:</p>
+    <ul>
+        <li>Buying a primary residence</li>
+        <li>Investing in real estate</li>
+        <li>Refinancing existing mortgages</li>
+        <li>Constructing or renovating a property</li>
+    </ul>
+    
+    <h2>How Does a Home Loan Work?</h2>
+    <p>Here's a simplified explanation of how home loans typically work:</p>
+    <ol>
+        <li><strong>Application:</strong> The borrower applies for a home loan from a lender, providing information about their financial situation, the property they wish to purchase, and any other relevant details.</li>
+        <li><strong>Approval:</strong> The lender evaluates the borrower's application, considering factors such as credit score, income, employment history, and the property's value, to determine loan eligibility.</li>
+        <li><strong>Terms:</strong> If approved, the lender provides the borrower with the loan terms, including the loan amount, interest rate, loan-to-value ratio, repayment schedule, and any associated fees.</li>
+        <li><strong>Disbursement:</strong> Once the borrower accepts the loan offer and fulfills any conditions, the lender disburses the funds, typically through a wire transfer or check, to the seller or escrow account.</li>
+        <li><strong>Repayment:</strong> The borrower is required to make regular mortgage payments according to the agreed-upon terms, which may include principal and interest, property taxes, and homeowners insurance, over the loan term.</li>
+        <li><strong>Completion:</strong> Once the borrower repays the entire loan amount, including interest and fees, the mortgage is considered fully satisfied, and the borrower gains full ownership of the property.</li>
+    </ol>
+    
+    <h2>Illustration:</h2>
+    <img src="./bank_home_loan_process_flow_slide01.jpg" alt="Bank Home Loan Process Flow">
+    
+    <p>It's crucial for borrowers to understand the terms and conditions of a home loan before committing to it and to budget appropriately for mortgage payments to avoid financial strain.</p>
+</div>
+
+ <footer>
+  <div class="footer-section contact-form">
+    <h3>Contact Us</h3>
+    <form action="#" method="post">
+      <input type="email" name="email" class="contact-input" placeholder="Your email" required>
+      <textarea name="message" class="contact-input" placeholder="Your message" required></textarea>
+      <button type="submit" class="contact-btn">Send</button>
+    </form>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2023 Credit+. All rights reserved.
+  </div>
+</footer>
+
+
+    
+
+
+</body>
+</html>

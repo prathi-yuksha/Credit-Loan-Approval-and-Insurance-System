@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear; 
+}
+body {
+    background-image: url(background3.jpg);
+    background-size: 100%;
+    color: aliceblue;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(68, 67, 67);
+    background-blend-mode: multiply;
+}
+
+nav{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+nav li{
+    display: inline-block;
+    
+   
+}
+nav ul{
+    margin-top: 30px; 
+    word-spacing: 70px;
+    
+    
+    
+}
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+   
+}
+
+.nav a:hover{
+    color: #2ecc71;
+    transition: 0.3s;
+}
+.sign {
+    float:right;
+    
+  
+   
+}
+button{
+    border-radius: 7px;
+    background-color: #27ae60;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 17px;
+}
+.main {
+   width: 100%;
+   text-align: center;
+   margin-top: 300px;
+   word-spacing: 5px;
+ 
+
+} 
+
+.main h1{
+    line-height: 40px;
+    padding: 20px;
+    font-size: 70px;
+    
+}
+.main p{
+    line-height: 25px;
+    padding: 10px;
+} 
+
+.started{
+    background-color: #f84312;
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    margin-left: 600px;
+    border-color: black;
+}
+.started:hover{
+    transition: 0.2s;
+    background-color: #da917d88;
+    border-color: #f84312;
+    border-style: double ;
+    
+}
+.logo{
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium';
+}
+.Main_c{
+    margin-left: 60px;
+
+}
+
+
+
+
+
+
+
+
+

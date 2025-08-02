@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Loan Predictor</title>
+</head>
+<body>
+    <h1>Home Loan Predictor</h1>
+
+    <form method="post" action="/home_loan">
+        <label for="education">Education:</label>
+        <select name="education" required>
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+        </select><br>
+
+        <label for="self_employed">Self Employed:</label>
+        <select name="self_employed" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label for="applicant_income">Applicant Income:</label>
+        <input type="number" name="applicant_income" required><br>
+
+        <label for="coapplicant_income">Coapplicant Income:</label>
+        <input type="number" name="coapplicant_income" required><br>
+
+        <label for="loan_amount">Loan Amount:</label>
+        <input type="number" name="loan_amount" required><br>
+        <button type="submit">Predict Home Loan</button>
+    </form>
+
+    {% if prediction is defined %}
+        <p>Home Loan Prediction: {{ prediction }}</p>
+    {% endif %}
+
+</body>
+</html>
